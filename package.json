@@ -1,0 +1,14 @@
+{
+  "author": "Hourai Teahouse",
+  "name": "com.houraiteahouse.serialization",
+  "displayName": "Hourai Serialization",
+  "version": "0.1.0",
+  "description": "Fast and efficient binary serialization",
+  "homepage": "https://github.com/HouraiTeahouse/Serialization",
+  "bugs": "https://github.com/HouraiTeahouse/Serialization/issues",
+  "repository": "github:HouraiTeahouse/Serialization",
+  "dependencies": {},
+  "publishConfig": {
+    "registry": "https://upm.houraiteahouse.net"
+  }
+}
