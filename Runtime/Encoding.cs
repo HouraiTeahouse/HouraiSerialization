@@ -6,7 +6,13 @@ namespace HouraiTeahouse.Serialization {
 public static class SerializationConstants {
 
   public static readonly Encoding Encoding = new UTF8Encoding();
-  public static int kMaxMessageSize = (int)ushort.MaxValue;
+
+  /// <summary>
+  /// A sane maximum message size for stackalloc'ed message buffers.
+  /// 
+  /// Defaults to 65535. Can be changed.
+  /// </summary>
+  public static int kMaxMessageSize = 65535;
 
 }
 

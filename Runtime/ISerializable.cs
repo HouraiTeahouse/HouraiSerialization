@@ -14,7 +14,7 @@ public interface ISerializable {
   /// The ordering of seriialziation must match the the ordering in Deserialize
   /// or there may bie issues in serialization parity.
   /// </summary>
-  void Serialize<T>(ref T serializer) where T : ISerializer;
+  void Serialize<T>(ref T serializer) where T : struct, ISerializer;
 
   /// <summary>
   /// Deserializes the object from a buffer via a deserializer.
@@ -22,7 +22,7 @@ public interface ISerializable {
   /// The ordering of seriialziation must match the the ordering in Serialize
   /// or there may be issues in serialization parity.
   /// </summary>
-  void Deserialize<T>(ref T deserializer) where T : IDeserializer;
+  void Deserialize<T>(ref T deserializer) where T : struct, IDeserializer;
 
 }
 
