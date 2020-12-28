@@ -250,7 +250,7 @@ public unsafe static class ISerializerExtensions {
     serializer.Write(buffer, count);
   }
 
-  public static void WriteStruct<T, TValue>(this ref T serializer, ref T value) 
+  public static void WriteStruct<T, TValue>(this ref T serializer, ref TValue value) 
                                             where T : struct, ISerializer 
                                             where TValue : struct {
     var size = UnsafeUtility.SizeOf<TValue>();
