@@ -344,7 +344,7 @@ public static unsafe class IDeserializerExtensions {
   public static void ReadStruct<T, TStruct>(this ref T deserializer, ref TStruct val) 
                                              where T : struct, IDeserializer
                                              where TStruct : struct {
-    var size = UnsafeUtility.SizeOf<T>();
+    var size = UnsafeUtility.SizeOf<TStruct>();
     deserializer.Reserve(size);
     UnsafeUtility.CopyPtrToStructure(deserializer.Current, out val);
     deserializer.Current += size;
