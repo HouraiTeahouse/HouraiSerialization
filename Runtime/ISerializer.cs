@@ -179,7 +179,7 @@ public unsafe static class ISerializerExtensions {
   }
 
   public static void Write<T>(this ref T serializer, int value) where T : struct, ISerializer {
-    serializer.Write((UInt16)ZigZag.Encode(value, 32));
+    serializer.Write((UInt32)ZigZag.Encode(value, 32));
   }
 
   public static void Write<T>(this ref T serializer, long value) where T : struct, ISerializer {
