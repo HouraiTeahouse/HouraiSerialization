@@ -12,7 +12,7 @@ public static class SerializationConstants {
   /// 
   /// Defaults to 65535. Can be changed.
   /// </summary>
-  public static int kMaxMessageSize = 1200;
+  public static int kMaxMessageSize = 65535;
 
 }
 
